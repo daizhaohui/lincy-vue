@@ -10,7 +10,9 @@
     "gulp": "^4.0.2",
     "gulp-run-command": "^0.0.10",
     "px2rem-loader": "^0.1.9",
-    "webpack": "^5.53.0"
+    "webpack": "^5.53.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-typescript": "^6.0.0-alpha.1"
   },
   "dependencies": {
     "webpackbar": "^5.0.0-3"
