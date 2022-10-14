@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "pack": "gulp pack",
+    "setup": "gulp install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "gulp": "^4.0.2",
+    "gulp-run-command": "^0.0.10",
+    "px2rem-loader": "^0.1.9",
+    "webpack": "^5.53.0"
+  },
+  "dependencies": {
+    "webpackbar": "^5.0.0-3"
+  }
+}

@@ -1,0 +1,7 @@
+.home{
+  .content{
+    font-size: 16px;
+    margin: 60px 60px;
+    color:@g_fontColor;
+  }
+}

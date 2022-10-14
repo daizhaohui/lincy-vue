@@ -1,0 +1,23 @@
+import Home from '../pages/home/index.vue';
+import NotFound from '../pages/notFound/index.vue';
+
+const routes = [
+  {
+    name:'root',
+    redirect:'/home',
+    path:'/',
+  },
+  {
+    name:'home',
+    component:Home,
+    path:'/home',
+  },
+  // 发在最后一个,没有匹配到以上的路由页面
+  {
+    name: 'notFound',
+    path: '/:pathMatch(.*)', 
+    component: NotFound
+  }
+];
+
+export default routes;

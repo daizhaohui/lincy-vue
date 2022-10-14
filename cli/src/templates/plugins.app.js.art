@@ -1,0 +1,23 @@
+{{if isTS}}export default{
+  beforeCreate(appConfig:any){
+    console.log(appConfig);
+  },
+  created(appContext:any){
+    console.log(appContext);
+  },
+  mounted(appContext:any){
+    console.log(appContext);
+  }
+};
+{{else}}export default{
+  beforeCreate(appConfig){
+    console.log(appConfig);
+  },
+  created(appContext){
+    console.log(appContext);
+  },
+  mounted(appContext){
+    console.log(appContext);
+  }
+};
+{{/if}}

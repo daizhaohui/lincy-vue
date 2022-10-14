@@ -1,0 +1,26 @@
+{
+    "files": ["src/**/*.ts"],
+    "compilerOptions": {
+      "declaration": true,
+      "noImplicitAny":true,
+      "preserveConstEnums":true,
+      "sourceMap":false,
+      "target": "es6",
+      "module": "esnext",
+      "experimentalDecorators": true, // 启用实验性的ES装饰器
+      "strict": true,
+      "moduleResolution": "node",
+      "noUnusedLocals": true,
+      "esModuleInterop": true,
+      "removeComments": true,
+      "outDir": "./dist",
+      "allowJs": true,
+      "checkJs": true,
+      "skipLibCheck":true,
+      "rootDir": "./src",
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": ["src/**/*.d.ts","src/types/*.ts","node_modules","__test__"]
+}

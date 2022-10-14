@@ -1,0 +1,33 @@
+import {createApp} from '@lincy-vue/core';
+import appConfig from './app.config';
+import root from './app.vue';
+import './locales/index.js';
+import './mock';
+import components from './config/components';
+{{if isAntDesignVue}}import moment from 'moment';
+import "moment/locale/zh-cn";
+moment.locale('zh-cn');{{/if}}
+{{if isTS}}
+const options: any = {
+  appConfig,
+  components: [],
+  rootComponent: root
+};
+const app = createApp(options);
+const comps: any = components;
+Object.keys(comps).forEach(key => {
+  app.use(comps[key]);
+});
+app.mount('#app');
+{{else}}
+const options = {
+    appConfig,
+    components:[],
+    rootComponent:root
+};
+const app = createApp(options);
+Object.keys(components).forEach(key => {
+  app.use(components[key]);
+});
+app.mount('#app');
+{{/if}}

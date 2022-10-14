@@ -1,0 +1,16 @@
+{{if isVant}}import { Button, Loading, Toast } from 'vant';
+export default {
+  Button,
+  Loading,
+  Toast
+};{{else if isAntDesignVue}}import { Button, Input } from 'ant-design-vue';
+export default {
+  Button,
+  Input
+};{{else if isElementUI}}import { ElButton } from 'element-plus';
+export default {
+  ElButton
+};
+{{else }}export default {};{{/if}}
+
+

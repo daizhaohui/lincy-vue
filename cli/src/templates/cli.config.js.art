@@ -1,0 +1,57 @@
+module.exports = (mode) => {
+  if (mode === 'development') {
+    return {
+      remUnit: 37.5,
+      injects: [],
+      devServer: {
+        port: 8080,
+        proxy: {}
+      },
+      alias: {},
+      mock: {
+        timeout: '200-600',
+        enabled: false
+      },
+      theme: {
+        enabled: false,
+        default: ''
+      },
+      defines:{}
+    };
+  } else if (mode === 'production') {
+    return {
+      remUnit: 37.5,
+      injects: [],
+      theme: {
+        enabled: false,
+        default: ''
+      },
+      mock: {
+        timeout: '200-600',
+        enabled: false
+      },
+      compress: {
+        enabled: true,
+        threshold: 10240,
+        minRatio: 0.8,
+        deleteOriginalAssets: false
+      },
+      splitChunks: {},
+      alias: {},
+      cdn: [
+        {
+          type: 'js',
+          match: false,
+          address: ''
+        },
+        {
+          type: 'css',
+          match: (name) => { return false; },
+          address: ''
+        }
+      ],
+      defines:{}
+    };
+  }
+  return {};
+};

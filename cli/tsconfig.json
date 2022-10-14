@@ -1,0 +1,27 @@
+{
+  "files": [
+    "src/**/*.ts",
+  ],
+  "compilerOptions": {
+    "declaration": false,
+    "noImplicitAny":true,
+    "preserveConstEnums":true,
+    "sourceMap":false,
+    "target": "esnext",
+    "module": "commonjs",
+    "experimentalDecorators": false, // 启用实验性的ES装饰器
+    "strict": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "outDir": "./dist",
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck":true,
+    "rootDir": "./src"
+  },
+  "include": [
+    "src/**/*.ts"],
+  "exclude": ["node_modules","__test__"]
+}

@@ -1,0 +1,9 @@
+import routes from  './config/routes';
+
+export default{
+  routes,
+  lang:{},
+  track:{},
+  http:{},
+  state:{}
+};

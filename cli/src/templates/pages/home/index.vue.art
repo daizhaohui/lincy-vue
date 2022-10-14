@@ -1,0 +1,11 @@
+<template>
+  <div class="home">
+    <div class="content">
+      {{output}}
+    </div>
+  </div>
+</template>
+{{if isTS}}<script src="./index.ts" lang="ts"></script>
+{{else}}<script src="./index.js" lang="js"></script>{{/if}}
+<style lang="less" src='./index.less'></style>
+

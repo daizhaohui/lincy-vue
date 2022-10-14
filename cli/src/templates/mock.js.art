@@ -1,0 +1,32 @@
+import mockjs from '{{importMockJS}}';
+{{each imports}}import {{$index}} from '{{$value}}';
+{{/each}}
+mockjs.setup({
+    timeout: '{{mockTimeout}}'
+});
+const mocks{{tsAnyType}}={{mocks}};
+Object.keys(mocks).forEach((m{{tsAnyType}})=>{
+    const mock{{tsAnyType}} = mocks[m];
+    if(mock){
+      Object.keys(mock).forEach((k{{tsAnyType}})=>{
+        if(k){
+          let type;
+          let url;
+          const index = k.indexOf(' ');
+          if(index>=0){
+            type = k.slice(0,index).toLowerCase();
+            url = k.slice(index+1);
+            if (url.indexOf('regexp:') === 0) {
+              url = new RegExp(url.split('regexp:')[1]);
+            }
+          } else {
+            type = 'get';
+            url = k;
+          }
+          if(mock[k] && url){
+            mockjs.mock(url,type,mock[k]);
+          }
+        }
+      });
+    }
+});

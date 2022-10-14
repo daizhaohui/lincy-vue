@@ -1,0 +1,40 @@
+{
+  "files": [
+    "src/**/*.ts",
+  ],
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+       "./src/*"
+      ]
+     },
+    "jsx": "preserve",
+    "jsxFactory": "VueTsxSupport",
+    "declaration": false,
+    "noImplicitAny":true,
+    "preserveConstEnums":true,
+    "sourceMap":true,
+    "target": "es5",
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "strict": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist",
+    "allowJs": true,
+    "rootDir": "./src",
+    "typeRoots": ["./node_modules/**/@types/", "./typings"]
+  },
+  "include": ["src/**/*.ts","src/**/*.tsx","src/**/*.js","src/**/*.vue"],
+  "exclude": ["node_modules","**/*.spec.ts"]
+}

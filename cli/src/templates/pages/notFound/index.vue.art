@@ -1,0 +1,32 @@
+<template>
+  <div class="not-found">
+    <div class="content">
+      {{ output }}
+    </div>
+  </div>
+</template>
+
+{{if isTS}}<script lang="ts">{{else}}<script lang="js">{{/if}}
+
+export default {
+  setup () {
+    const output = 'Page is not found!';
+    return {
+      output
+    };
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.not-found{
+  margin: 60px 60px;
+  .content{
+    color: red;
+    font-size: @g_fontSize;
+    color:@g_fontColor;
+  }
+}
+</style>
+
+

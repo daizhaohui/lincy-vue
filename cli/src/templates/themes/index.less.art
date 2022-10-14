@@ -1,0 +1,4 @@
+{{if isAntDesignVue}}@import 'antd.less';{{/if}}{{if isElementUI}}@import '~element-plus/lib/theme-chalk/index.css';{{/if}}
+
+@g_fontColor:blue;
+@g_fontSize:24px;
