@@ -7,18 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 export default class HtmlUtil{
 
   #context:IBuildContext = null;
-  #templateParameters:any = {
-    headers:'',
-    bodys:'',
-    extensions:''
-  };
 
   constructor(context:IBuildContext){
     this.#context = context;
-  }
-
-  appdendTemplateParameters(name:string,value:any){
-    this.#templateParameters[name] = value;
   }
 
   createHtmlPlugin(){
@@ -40,10 +31,10 @@ export default class HtmlUtil{
         }
       });
       if(headers.length>0){
-        this.appdendTemplateParameters("headers",headers.join('\n'));
+        templateParameters["headers"] = headers.join('\n');
       }
       if(bodys.length>0){
-        this.appdendTemplateParameters("bodys",bodys.join('\n'));
+        templateParameters["bodys"] = bodys.join('\n');
       }
     }
     const options = {

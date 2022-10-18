@@ -14,7 +14,7 @@ program
 .option('-p,--program [program]', '编程语言：js、ts','ts')
 .option('-t,--template [template]', '选择html模板：desktop、mobile.', 'desktop')
 .allowUnknownOption()
-.action((name, options) => {
+.action((name: string, options: any) => {
   require('../lib/create')(name, options)
 });
 
@@ -29,7 +29,7 @@ program
 .option('-e,--theme [theme]', '编译的皮肤名称', '')
 .option('--report','打包分析报告')
 .allowUnknownOption()
-.action((options) => {
+.action((options: any) => {
   require('../lib/build')(options)
 });
 
@@ -38,7 +38,7 @@ program
 .option('-t,--template [template]', '选择html模板：desktop、phone.', 'desktop')
 .option('-e --theme [theme]', '编译的皮肤名称', '')
 .allowUnknownOption()
-.action((options) => {
+.action((options: any) => {
   require('../lib/serve')(options)
 });
 

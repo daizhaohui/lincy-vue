@@ -79,12 +79,12 @@ export default class InitProject{
 
   toSelectUILibrary(selected:any){
     if(selected.template===HtmlTemplate.Mobile){
-      inquirer.prompt([PromptList[3]]).then(answers=>{
+      inquirer.prompt([PromptList[3]]).then((answers:any)=>{
         Object.assign(this.#context.inputOptions,selected,answers);
         this.createProject();
       });
      } else {
-      inquirer.prompt([PromptList[2]]).then(answers=>{
+      inquirer.prompt([PromptList[2]]).then((answers:any)=>{
         Object.assign(this.#context.inputOptions,selected,answers);
         this.createProject();
       });
